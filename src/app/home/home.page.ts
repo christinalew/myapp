@@ -9,4 +9,5 @@ export class HomePage {
 
   constructor() {}
 
+  lists = ['Homework','Groccery List','Chores'];
 }
