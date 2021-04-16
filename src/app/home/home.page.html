@@ -4,9 +4,19 @@
       Welcome
     </ion-title>
   </ion-toolbar>
+
+  <ion-toolbar color="primary" >
+    <ion-buttons slot="end">
+      <ion-button (click)="gotoNewListPage()">
+        <ion-icon size="large" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title  size="small">My Lists</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" >
+  
   <ion-list>
     <ion-item-sliding *ngFor="let list of lists">
       <ion-item>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from'@angular/router'
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   lists = ['Homework','Groccery List','Chores'];
   removeList(i) {
     console.log('List removed')
     this.lists.splice(i,1);
+  }
+  addList(listname) {
+    this.lists.push(listname);
+  }
+  gotoNewListPage() {
+    this.router.navigate(['/newlist']);
   }
 }
